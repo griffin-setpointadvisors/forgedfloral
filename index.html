@@ -749,6 +749,140 @@
       transform: translateY(0);
     }
 
+    /* ── LOCATIONS ── */
+    .locations {
+      background: var(--cream);
+      padding: 7rem 5rem;
+    }
+    .locations-inner { max-width: 900px; margin: 0 auto; }
+    .locations-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 300;
+      color: var(--charcoal);
+      margin-bottom: 0.8rem;
+      line-height: 1.2;
+    }
+    .locations-heading em { font-style: italic; color: var(--rust); }
+    .locations-sub {
+      font-size: 0.74rem;
+      line-height: 2;
+      color: var(--steel-mid);
+      margin-bottom: 3rem;
+      max-width: 520px;
+    }
+    .locations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .location-card {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      padding: 1.8rem;
+      border: 1px solid rgba(184,145,90,0.2);
+      background: var(--warm-white);
+    }
+    .location-icon { padding-top: 0.2rem; flex-shrink: 0; }
+    .location-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.3rem;
+    }
+    .location-info p {
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      color: var(--smoke);
+      margin-bottom: 0.4rem;
+      line-height: 1.6;
+    }
+    .location-info span {
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    /* ── EVENTS ── */
+    .events {
+      background: var(--charcoal);
+      padding: 7rem 5rem;
+    }
+    .events-inner { max-width: 900px; margin: 0 auto; }
+    .events-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3vw, 3rem);
+      font-weight: 300;
+      color: var(--cream);
+      margin-bottom: 0.8rem;
+      line-height: 1.2;
+    }
+    .events-heading em { font-style: italic; color: var(--rust-light); }
+    .events-sub {
+      font-size: 0.74rem;
+      line-height: 2;
+      color: rgba(245,240,232,0.5);
+      margin-bottom: 3rem;
+      max-width: 520px;
+    }
+    .events-list { display: flex; flex-direction: column; gap: 1rem; }
+    .event-card {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      padding: 1.8rem 2rem;
+      border: 1px solid rgba(184,145,90,0.15);
+      background: rgba(255,255,255,0.03);
+    }
+    .event-date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 52px;
+      padding-top: 0.2rem;
+    }
+    .event-month {
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .event-day {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1;
+    }
+    .event-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 0.4rem;
+    }
+    .event-info p {
+      font-size: 0.68rem;
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+      color: rgba(245,240,232,0.45);
+    }
+
+    /* responsive additions */
+    @media (max-width: 900px) {
+      .locations { padding: 5rem 2rem; }
+      .locations-grid { grid-template-columns: 1fr; }
+      .events { padding: 5rem 2rem; }
+    }
+    @media (max-width: 560px) {
+      .locations { padding: 4rem 1.4rem; }
+      .events { padding: 4rem 1.4rem; }
+      .event-card { flex-direction: column; gap: 1rem; }
+    }
+
     /* ── HAMBURGER ── */
     .nav-hamburger {
       display: none;
@@ -894,8 +1028,10 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#about">Our Craft</a></li>
+      <li><a href="#stores">Find Us</a></li>
+      <li><a href="#events">Events</a></li>
       <li><a href="#custom">Custom Orders</a></li>
-      <li><a href="https://etsy.com" target="_blank">Shop Etsy</a></li>
+      <li><a href="https://forgedfloral.etsy.com" target="_blank">Shop Etsy</a></li>
     </ul>
   </nav>
 
@@ -907,10 +1043,10 @@
         Metal flowers<br>that <em>never fade.</em>
       </h1>
       <p class="hero-sub">
-        Each piece plasma-cut and hand-shaped from raw steel — individually forged, never cast, never mass-produced. A permanent bloom for any space.
+        Each piece cut and hand-shaped from raw steel — individually forged, never cast, never mass-produced. A permanent bloom for any space.
       </p>
       <div class="hero-cta">
-        <a href="https://etsy.com" target="_blank" class="btn-primary">Shop on Etsy</a>
+        <a href="https://forgedfloral.etsy.com" target="_blank" class="btn-primary">Shop on Etsy</a>
         <a href="#custom" class="btn-secondary">Request Custom</a>
       </div>
     </div>
@@ -1020,7 +1156,61 @@
       </div>
     </div>
     <div class="gallery-cta reveal">
-      <a href="https://etsy.com" target="_blank" class="btn-primary">View Full Shop on Etsy</a>
+      <a href="https://forgedfloral.etsy.com" target="_blank" class="btn-primary">View Full Shop on Etsy</a>
+    </div>
+  </section>
+
+  <!-- FIND US IN STORE -->
+  <section class="locations" id="stores">
+    <div class="locations-inner reveal">
+      <p class="section-label">Find Us In Person</p>
+      <h2 class="locations-heading">Retail <em>locations.</em></h2>
+      <p class="locations-sub">Pick one up in person at these local storefronts carrying ForgedFloral pieces.</p>
+      <div class="locations-grid">
+        <!-- Add store entries here as you confirm them -->
+        <div class="location-card">
+          <div class="location-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2C9.58 2 6 5.58 6 10c0 6.5 8 16 8 16s8-9.5 8-16c0-4.42-3.58-8-8-8Zm0 10.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" fill="#8b4a2b" opacity="0.5"/></svg>
+          </div>
+          <div class="location-info">
+            <h3>Store Name</h3>
+            <p>123 Main Street, City, NY</p>
+            <span>Coming soon</span>
+          </div>
+        </div>
+        <div class="location-card">
+          <div class="location-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 2C9.58 2 6 5.58 6 10c0 6.5 8 16 8 16s8-9.5 8-16c0-4.42-3.58-8-8-8Zm0 10.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z" fill="#8b4a2b" opacity="0.5"/></svg>
+          </div>
+          <div class="location-info">
+            <h3>Store Name</h3>
+            <p>456 Main Street, City, NY</p>
+            <span>Coming soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="events" id="events">
+    <div class="events-inner reveal">
+      <p class="section-label" style="color:var(--gold)">upcoming</p>
+      <h2 class="events-heading">Find us <em>out there.</em></h2>
+      <p class="events-sub">Craft shows, markets, and pop-ups where you can see the work in person and meet the maker.</p>
+      <div class="events-list">
+        <!-- Add events here as they are confirmed -->
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-month">TBD</span>
+            <span class="event-day">—</span>
+          </div>
+          <div class="event-info">
+            <h3>Events coming soon</h3>
+            <p>Check back for upcoming craft shows and markets. Sign up below to be notified first.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1036,7 +1226,7 @@
     <div class="form-panel">
       <h3>Get in Touch</h3>
       <p class="form-sub">Custom orders & inquiries</p>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form action="https://formspree.io/f/xjgpbajy" method="POST">
         <div class="form-group">
           <label>Your Name</label>
           <input type="text" name="name" placeholder="Jane Smith" required />
@@ -1070,7 +1260,7 @@
     <p class="section-label" style="color: rgba(245,240,232,0.6); margin-bottom: 0.8rem;">Stay Connected</p>
     <h2>Be first to know.</h2>
     <p>New pieces, limited runs, and event updates — delivered directly to you.</p>
-    <form class="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <form class="signup-form" action="https://formspree.io/f/xjgpbajy" method="POST">
       <input type="email" name="email" placeholder="Your email address" required />
       <button type="submit">Subscribe</button>
     </form>
@@ -1098,10 +1288,12 @@
         <p>Hand-forged steel flowers made in Upstate New York. Each piece shaped individually — never cast, never mass-produced.</p>
       </div>
       <div class="footer-col">
-        <h4>Shop</h4>
+        <h4>Explore</h4>
         <ul>
-          <li><a href="https://etsy.com" target="_blank">Etsy Store</a></li>
+          <li><a href="https://forgedfloral.etsy.com" target="_blank">Etsy Store</a></li>
           <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#stores">Find Us In Store</a></li>
+          <li><a href="#events">Upcoming Events</a></li>
           <li><a href="#custom">Custom Orders</a></li>
         </ul>
       </div>
@@ -1151,13 +1343,13 @@
 
     // Smooth nav highlighting
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const navAnchors = document.querySelectorAll('.nav-links a');
     window.addEventListener('scroll', () => {
       let current = '';
       sections.forEach(s => {
         if (window.scrollY >= s.offsetTop - 120) current = s.id;
       });
-      navLinks.forEach(a => {
+      navAnchors.forEach(a => {
         a.style.color = a.getAttribute('href') === `#${current}` ? 'var(--rust)' : '';
       });
     });
